@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Otimizador StatTrak - Gerador de Back-end</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>OTIMIZADOR STATTRAK</h1>
+  </header>
+
+  <main>
+    <div class="box-container">
+      <textarea id="sql-input" placeholder="COLE SEU CODIGO SQL AQUI"></textarea>
+    </div>
+
+    <div class="actions">
+      <button onclick="gerarBackend()">GERAR COMANDO TERMINAL</button>
+    </div>
+
+    <div id="output-section">
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <span>Cole este comando no <strong>PowerShell / Terminal do VS Code</strong> dentro da pasta do projeto:</span>
+        <button class="secondary" onclick="copiarComando()" id="btn-copy">Copiar Comando</button>
+      </div>
+      <div class="terminal-box" id="terminal-output"></div>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
